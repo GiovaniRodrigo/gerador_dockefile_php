@@ -32,3 +32,27 @@ docker run -it giovanii/gerador_dockerfile
 ```
 
 ## Exemplo de uso
+
+Ao executar o comando abaixo, será exibido um menu interativo para escolher a versão do PHP:
+
+```
+docker run -it giovanii/gerador_dockerfile
+```
+
+Saída esperada:
+
+```
+Escolha a versão do PHP:
+
+1) 8.2-cli
+2) 8.1-cli
+3) 8.0-cli
+4) 7.4-cli
+5) 7.3-cli
+6) 7.2-cli
+7) 7.1-cli
+8) 7.0-cli
+9) 5.6-cli
+
+Digite o número da versão desejada:
+```
