@@ -1,0 +1,82 @@
+{
+  "pdo": {
+    "requer_pacotes_do_sistema": "Nenhum",
+    "depende_de_outras_extensoes_php": "-"
+  },
+  "pdo_mysql": {
+    "requer_pacotes_do_sistema": "default-mysql-client, libmysqlclient-dev ou libmariadb-dev",
+    "depende_de_outras_extensoes_php": "pdo"
+  },
+  "mysqli": {
+    "requer_pacotes_do_sistema": "default-mysql-client, libmysqlclient-dev ou libmariadb-dev",
+    "depende_de_outras_extensoes_php": "-"
+  },
+  "pgsql": {
+    "requer_pacotes_do_sistema": "libpq-dev",
+    "depende_de_outras_extensoes_php": "-"
+  },
+  "pdo_pgsql": {
+    "requer_pacotes_do_sistema": "libpq-dev",
+    "depende_de_outras_extensoes_php": "pdo"
+  },
+  "bcmath": {
+    "requer_pacotes_do_sistema": "Nenhum",
+    "depende_de_outras_extensoes_php": "-"
+  },
+  "gd": {
+    "requer_pacotes_do_sistema": "libpng-dev, libjpeg-dev, libfreetype6-dev, libwebp-dev",
+    "depende_de_outras_extensoes_php": "-"
+  },
+  "imagick": {
+    "requer_pacotes_do_sistema": "libmagickwand-dev, imagemagick",
+    "depende_de_outras_extensoes_php": "-"
+  },
+  "intl": {
+    "requer_pacotes_do_sistema": "libicu-dev",
+    "depende_de_outras_extensoes_php": "-"
+  },
+  "mbstring": {
+    "requer_pacotes_do_sistema": "libonig-dev (em versões antigas do PHP)",
+    "depende_de_outras_extensoes_php": "-"
+  },
+  "soap": {
+    "requer_pacotes_do_sistema": "libxml2-dev",
+    "depende_de_outras_extensoes_php": "-"
+  },
+  "xml": {
+    "requer_pacotes_do_sistema": "libxml2-dev",
+    "depende_de_outras_extensoes_php": "-"
+  },
+  "zip": {
+    "requer_pacotes_do_sistema": "libzip-dev",
+    "depende_de_outras_extensoes_php": "-"
+  },
+  "curl": {
+    "requer_pacotes_do_sistema": "libcurl4-openssl-dev",
+    "depende_de_outras_extensoes_php": "-"
+  },
+  "opcache": {
+    "requer_pacotes_do_sistema": "Nenhum",
+    "depende_de_outras_extensoes_php": "-"
+  },
+  "xdebug": {
+    "requer_pacotes_do_sistema": "Nenhum (instalado via PECL)",
+    "depende_de_outras_extensoes_php": "-"
+  },
+  "redis": {
+    "requer_pacotes_do_sistema": "Nenhum (instalado via PECL)",
+    "depende_de_outras_extensoes_php": "-"
+  },
+  "swoole": {
+    "requer_pacotes_do_sistema": "Nenhum (PECL, pode exigir libboost-dev)",
+    "depende_de_outras_extensoes_php": "-"
+  },
+  "amqp": {
+    "requer_pacotes_do_sistema": "librabbitmq-dev",
+    "depende_de_outras_extensoes_php": "-"
+  },
+  "gmp": {
+    "requer_pacotes_do_sistema": "libgmp-dev",
+    "depende_de_outras_extensoes_php": "-"
+  }
+}

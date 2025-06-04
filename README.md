@@ -25,10 +25,16 @@ Este projeto é um gerador de arquivos Dockerfile para ambientes de desenvolvime
 
 ## Executando via Docker
 
-Este repositório também possui um `Dockerfile` pronto para uso. Caso prefira executar o gerador dentro de um container, utilize a imagem disponível:
+Este repositório também possui um `Dockerfile` pronto para uso. Para construir a imagem com as permissões do seu usuário, utilize o comando abaixo:
 
 ```
-docker run -it giovanii/gerador_dockerfile
+docker build --build-arg USER_ID=$(id -u) --build-arg GROUP_ID=$(id -g) -t sua-imagem .
+```
+
+Caso prefira executar o gerador dentro de um container, utilize a imagem disponível:
+
+```
+docker run -it -v "$(pwd)/Dockerfiles:/usr/src/app/Dockerfiles" giovanii/gerador_dockerfile
 ```
 
 ## Exemplo de uso
@@ -36,7 +42,7 @@ docker run -it giovanii/gerador_dockerfile
 Ao executar o comando abaixo, será exibido um menu interativo para escolher a versão do PHP:
 
 ```
-docker run -it giovanii/gerador_dockerfile
+docker run -it -v "$(pwd)/Dockerfiles:/usr/src/app/Dockerfiles" giovanii/gerador_dockerfile
 ```
 
 Saída esperada:

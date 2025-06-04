@@ -1,0 +1,96 @@
+{
+    "maintainer": "Your Name",
+    "from": [
+        {
+            "image": "ubuntu:latest",
+            "description": "Base image for the Dockerfile"
+        },
+        {
+            "image": "ubuntu:22.04",
+            "description": "Ubuntu 22.04 LTS image"
+        },
+        {
+            "image": "debian:bullseye",
+            "description": "Debian Bullseye image"
+        },
+        {
+            "image": "debian:bookworm",
+            "description": "Debian Bookworm image"
+        }
+    ],
+    "run": [
+        {
+            "command": "apt-get update",
+            "description": "Update package lists"
+        },
+        {
+            "command": "apt-get upgrade -y",
+            "description": "Upgrade installed packages"
+        },
+        {
+            "command": "apt-get install -y curl",
+            "description": "Install curl"
+        },
+        {
+            "command": "apt-get install -y wget",
+            "description": "Install wget"
+        },
+        {
+            "command": "apt-get install -y git",
+            "description": "Install git"
+        },
+        {
+            "command": "apt-get install -y unzip",
+            "description": "Install unzip"
+        },
+        {
+            "command": "apt-get install -y nano",
+            "description": "Install nano editor"
+        },
+        {
+            "command": "apt-get install -y vim",
+            "description": "Install vim editor"
+        },
+        {
+            "command": "apt-get install -y php php-cli php-fpm php-mbstring php-xml php-curl php-zip php-mysql php-gd php-intl php-bcmath php-pear php-dev php-json php-soap php-ldap php-xmlrpc php-xdebug",
+            "description": "Install PHP and common PHP extensions"
+        },
+        {
+            "command": "apt-get clean",
+            "description": "Clean up APT cache"
+        },
+        {
+            "command": "rm -rf /var/lib/apt/lists/*",
+            "description": "Remove APT lists to reduce image size"
+        }
+    ],
+    "copy": [
+        {
+            "source": "./app",
+            "destination": "/usr/src/app",
+            "description": "Copy application files to the container"
+        }
+    ],
+    "workdir": "/usr/src/app",
+    "cmd": [
+        {
+            "command": "supervisord -c /etc/supervisor/supervisord.conf",
+            "description": "Start Supervisor daemon"
+        },
+        {
+            "command": "php-fpm -y /etc/php/7.4/fpm/php-fpm.conf",
+            "description": "Start PHP-FPM"
+        },
+        {
+            "command": "apache2ctl -D FOREGROUND",
+            "description": "Start Apache in foreground"
+        }
+    ],
+    "volumes": [
+        "/data"
+    ],
+    "labels": {
+        "version": "1.0",
+        "description": "Dockerfile for a simple web application"
+    }
+}
